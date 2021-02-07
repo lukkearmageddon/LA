@@ -1,0 +1,21 @@
+header {
+	margin: 20px;
+	padding: 20px;
+
+	background-color: #F0C52E;
+	border: 1px solid #F0C52E;
+	width: 80%;
+	align-content: central;
+}
+
+.description {
+	font-weight: 100; /* Thin, начертание текса "тонкий" */
+}
+.title-desc {
+	font-weight: 100; /* Thin, начертание текса "тонкий" */
+	font-size: 2em;
+}
+
+.search {
+	background-image: url("svg/search.svg");
+}

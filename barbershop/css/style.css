@@ -1,0 +1,1233 @@
+/*@charset "UTF-8";*/
+/* CSS Document */
+
+:root {
+	--basic-black: #000000;
+	--basic-extra-dark: #242424;
+	--basic-dark: #aba9a7;
+	--basic-neutral: #e5e5e5;
+	--basic-extra-light: #f8f5f2;
+	--basic-white: #ffffff;
+
+	--special: #663d15;
+}
+
+/* Global */
+body {
+	min-width: 960px;
+	margin: 0;
+	padding: 0;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 700;
+	color: var(--basic-white);
+	text-transform: uppercase;
+	background-color: var(--basic-black);
+	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/bg.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+/* Grid */
+
+.page {
+	height: 100%;
+}
+
+.page-body {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	align-content: start;
+}
+
+/* Grid for pages */
+
+.page-product {
+	display: grid;
+	grid-template-columns: 460px 1fr;
+	align-content: start;
+}
+
+.page-product .page-title {
+	grid-column: 1 / -1;
+}
+
+.page-product .breadcrumbs {
+	grid-column: 1 / -1;
+	margin-bottom: 40px;
+}
+
+.page-catalog {
+	display: grid;
+	grid-template-columns: 180px 1fr;
+	align-content: start;
+}
+
+.page-catalog .page-title {
+	grid-column: 1 / -1;
+}
+
+.page-catalog .breadcrumbs {
+	grid-column: 1 / -1;
+	margin-bottom: 40px;
+}
+
+/* Main header */
+
+.main-header {
+	margin-bottom: 70px;
+}
+
+.inner-page .main-header {
+	margin-bottom: 70px;
+	background-color: var(--basic-black);
+}
+
+/* Main navigation */
+
+.main-navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--basic-white);
+	background-color: transparent;
+}
+
+.inner-page .main-navigation {
+	align-items: flex-start;
+	flex-direction: row;
+}
+
+.main-navigation-wrapper {
+	width: 100%;
+	margin-bottom: 60px;
+	background-color: var(--basic-black);
+}
+
+/* Logo */
+
+.inner-page .main-header-logo {
+	position: relative;
+	order: 0;
+	width: 111px;
+	height: 24px;
+	margin: auto;
+}
+
+.main-header-logo {
+	order: 2;
+	width: 368px;
+	height: 153px;
+}
+
+/* Container */
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.main-navigation .container {
+	display: flex;
+}
+
+.main-navigation-wrapper .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Site navigation */
+
+.site-navigation {
+	display: flex;
+	flex-wrap: wrap;
+	width: 620px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	min-height: 70px;
+}
+
+.site-navigation-current {
+	position: relative;
+}
+
+.site-navigation-current::after {
+	content: "";
+	position: absolute;
+	right: 20px;
+	bottom: 0;
+	left: 20px;
+	height: 6px;
+	background-color: var(--basic-white);
+}
+
+.site-navigation-current a:not([href]) {
+	background-color: var(--basic-black);
+}
+
+/* User navigation */
+
+.user-navigation {
+	max-width: 140px;
+}
+
+.inner-page .user-navigation {
+	margin-left: auto;
+}
+
+.site-navigation a,
+.user-navigation a {
+	color: var(--basic-white);
+	display: block;
+	padding: 25px 20px;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+	background-color: var(--basic-extra-dark);
+}
+
+/* login link */
+
+.login-link::before {
+	content: "";
+	position: absolute;
+	top: 27px;
+	left: 24px;
+	width: 16px;
+	height: 18px;
+	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/login.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	opacity: 0.3;
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+	opacity: 1;
+}
+
+.user-navigation .login-link {
+	padding-left: 50px;
+	position: relative;
+}
+
+/* Features */
+
+.features {
+	margin-bottom: 80px;
+}
+
+.features-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.feature-item {
+	width: 300px;
+	text-align: center;
+}
+
+.feature-item h3 {
+	position: relative;
+	margin: 0;
+	margin-bottom: 60px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.feature-item h3::after {
+	content: "";
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
+	background-color: var(--basic-white);
+	transform: rotate(45deg);
+}
+
+.feature-item p {
+	margin: 0 10px;
+}
+
+ /* Index columns */
+
+.index-columns {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 80px;
+	margin-bottom: 35px;
+	color: var(--basic-black);
+	background-color: var(--basic-extra-light);
+	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/pattern-light.png"), url("file:///Users/holylemon/Sites/LA/barbershop/img/line.png");
+	background-position: 0 0, center;
+	background-repeat: repeat, no-repeat;
+}
+
+.index-columns h2 {
+	margin: 0;
+	margin-bottom: 25px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+/* NEWS */
+
+.news {
+	width: 380px;
+}
+
+.news-list {
+	margin: 0;
+	margin-bottom: 25px;
+	padding: 0;
+	list-style: none;
+}
+
+.news-item {
+	margin-bottom: 25px;
+}
+
+.news-item p {
+	margin: 0;
+}
+
+/* Button */
+
+.button {
+	display: inline-block;
+	margin-right: 16px;
+	padding: 10px 30px;
+	font: inherit;
+	text-align: center;
+	color: var(--basic-white);
+	vertical-align: middle;
+	text-transform: uppercase;
+	background-color: var(--basic-black);
+	border: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+	background-color: var(--special);
+}
+
+.button.disabled,
+.button:disabled {
+	cursor: default;
+	opacity: 0.5;
+	background-color: var(--basic-black);
+}
+
+/* Gallery */
+
+.gallery {
+	width: 300px;
+}
+
+.gallery-container {
+	position: relative;
+	height: 260px;
+}
+
+.gallery-content {
+	height: 164px;
+	margin: 0;
+	background-color: var(--basic-dark);
+	/*border: 7px solid var(--basic-white);*/
+}
+
+.gallery-content img {
+	object-fit: contain;
+	width: 286px;
+	height: 164px;
+}
+
+.gallery-button {
+	position: absolute;
+	bottom: 0;
+	box-sizing: border-box;
+	width: 140px;
+	margin: 0;
+}
+
+.gallery-button-back {
+	left: 0;
+}
+
+.gallery-button-next {
+	right: 0;
+}
+
+/* Contacts */
+
+.contacts {
+	width: 380px;
+}
+
+.contacts p {
+	margin: 0;
+	margin-bottom: 25px;
+}
+/* Appointment */
+
+.appoinment {
+	width: 300px;
+}
+
+.appoinment-info {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.appoinment-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.appoinment-item {
+	width: 140px;
+	margin-top: 0;
+	margin-bottom: 10px
+}
+
+.appoinment-item label {
+	display: block;
+	margin-bottom: 9px;
+	margin-left: 15px;
+}
+
+.appoinment-item input {
+	width: 140px;
+	padding-top: 8px;
+	padding-right: 15px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+	font: inherit;
+	background-color: transparent;
+	border: 2px solid var(--basic-black);
+	box-sizing: border-box;
+}
+
+.appoinment-item input:focus {
+	border-color: var(--special);
+}
+
+.appoinment .button {
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	margin-right: 0;
+}
+
+.inner-page {
+	color: var(--basic-black);
+	background-color: var(--basic-extra-light);
+	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/pattern-light.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.page-title {
+	margin: 0;
+	margin-bottom: 15px;
+	padding: 0;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.breadcrumbs li {
+	position: relative;
+	margin-right: 42px;
+}
+
+.breadcrumbs li::after {
+	content: "";
+	position: absolute;
+	top: 7px;
+	right: -25px;
+	width: 8px;
+	height: 8px;
+	background-color: var(--basic-black);
+	transform: rotate(45deg);
+}
+
+.breadcrumbs li:last-child {
+	margin-right: 0;
+}
+
+.breadcrumbs-current::after {
+	display: none;
+}
+
+.breadcrumbs a {
+	color: var(--basic-black);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+	text-decoration: underline;
+}
+
+.breadcrumbs-current {
+	color: var(--basic-dark);
+}
+
+/* Product photo */
+
+.product-photo-full {
+	display: block;
+	width: 460px;
+	height: 498px;
+	margin: 0;
+	margin-bottom: 20px;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-photo-preview {
+	list-style: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.product-photo-preview li {
+	width: 140px;
+	height: 149px;
+	margin-right: 20px;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-photo-preview li:hover {
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Product-info */
+
+.product-info {
+	width: 390px;
+	padding-top: 23px;
+	padding-left: 80px;
+}
+
+.product-info p {
+	margin: 0;
+}
+
+.product-info .product-text {
+	margin-bottom: 35px;
+}
+
+.product-info .product-price {
+	display: flex;
+	margin-bottom: 63px;
+}
+
+.product-price .button {
+	padding-right: 17px;
+	padding-left: 17px;
+}
+
+.product-article {
+	text-align: right;
+	color: var(--basic-dark);
+}
+
+.product-price b {
+	line-height: 20px;
+	text-align: center;
+	background-color: var(--basic-neutral);
+	width: 112px;
+	padding-top: 13px;
+	padding-right: 36px;
+	padding-bottom: 11px;
+	padding-left: 36px;
+	box-sizing: border-box;
+}
+
+.product-info h3 {
+	margin: 0;
+	margin-bottom: 27px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.product-info ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.product-info li {
+	position: relative;
+	padding-left: 23px;
+}
+
+.product-info li::before {
+	content: "";
+	position: absolute;
+	top: 7px;
+	width: 8px;
+	height: 8px;
+	left: 1px;
+	background-color: var(--basic-black);
+	transform: rotate(45deg);
+}
+
+.product-description {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 10px;
+	margin-bottom: 29px;
+}
+
+.product-description p {
+	width: 200px;
+}
+
+/* Filters */
+
+.filters {
+	width: 180px;
+}
+
+.filter fieldset {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 30px;
+	border: none;
+}
+
+.filter fieldset:first-child {
+	margin-bottom: 35px;
+}
+
+.filter legend {
+	margin-bottom: 26px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.filter ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 18px;
+}
+
+.filter-option {
+	margin-bottom: 19px;
+	padding-left: 45px;
+}
+
+.filter-option label {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	user-select: none;
+}
+
+.filter-input-checkbox:hover + label,
+.filter-input-checkbox:focus + label {
+	color: var(--special);
+}
+
+.filter-input-checkbox + label::before {
+	content: "";
+	position: absolute;
+	left: -42px;
+	top: 0;
+	width: 16px;
+	height: 16px;
+	border: 2px solid var(--basic-black);
+}
+
+.filter-input-checkbox:checked + label::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: -38px;
+	width: 12px;
+	height: 12px;
+	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/cross.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.filter-input-radio + label::before {
+	content: "";
+	position: absolute;
+	left: -42px;
+	top: -1px;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #000000;
+	border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+	content: "";
+	position: absolute;
+	left: -36px;
+	top: 5px;
+	width: 8px;
+	height: 8px;
+	background-color: #000000;
+	border-radius: 50%;
+}
+
+.filter-button {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+/* Big heading*/
+
+.inner-content .big-heading {
+	display: flex;
+	align-items: center;
+	margin-top: 55px;
+	margin-bottom: 65px;
+	font-size: 48px;
+	line-height: 48px;
+	text-align: center;
+}
+
+.big-heading::before,
+.big-heading::after {
+	/*display: block;*/
+	content: "";
+	flex-grow: 1;
+	flex-shrink: 0;
+	/*width: 180px;*/
+	height: 2px;
+	background-color: var(--basic-black);
+}
+
+.big-heading::before {
+	margin-right: 25px;
+}
+
+.big-heading::after {
+	margin-left: 25px;
+}
+
+/* Custom list */
+
+.custom-list-1 {
+	margin: 14px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.custom-list-1 li {
+	position: relative;
+	margin-bottom: 15px;
+	padding-left: 20px;
+}
+
+.custom-list-1 li::before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	background-color: var(--basic-black);
+	transform: rotate(45deg);
+}
+
+/* Custom table */
+
+.custom-table-1 {
+	width: 100%;
+}
+
+.custom-table-1 td {
+	width: 50%;
+}
+
+
+.custom-table-1 td:last-child {
+	text-align: center;
+}
+
+/* Inner-columns */
+
+.inner-columns {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 60px 0;
+}
+
+.inner-column-left,
+.inner-column-right {
+	width: 460px;
+}
+
+.inner-column-left *:first-child,
+.inner-column-right *:first-child {
+	margin-top: 0;
+}
+
+.inner-column-left *:last-child,
+.inner-column-right *:last-child {
+	margin-bottom: 0;
+}
+
+.inner-columns > h3:first-child {
+	margin-top: 0;
+	width: 100%;
+}
+
+/* Catalog */
+
+.catalog {
+	margin-left: 60px;
+}
+
+.catalog-list {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 25px;
+	list-style: none;
+}
+
+.catalog-item {
+	width: 220px;
+	min-height: 285px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	background-color: var(--basic-extra-light);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.catalog-item a {
+	display: flex;
+	flex-direction: column;
+	color: var(--basic-black);
+}
+
+.catalog-item h3 {
+	order: 1;
+	margin-top: 17px;
+	margin-right: 15px;
+	margin-bottom: 12px;
+	margin-left: 15px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.catalog-category {
+	display: block;
+	text-transform: none;
+}
+
+.catalog-item-image {
+	width: 220px;
+	height: 165px;
+	margin: 0;
+	object-fit: contain;
+}
+
+.catalog-item-price {
+	display: flex;
+	margin: 15px;
+	margin-top: 0;
+}
+
+.catalog-item-price b {
+	width: 112px;
+	padding: 13px 25px 11px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	background-color: var(--basic-neutral);
+}
+
+.catalog-item-price .button {
+	padding: 13px 18px 11px;
+	margin-right: 0;
+	line-height: 20px
+	color: var(--basic-white);
+}
+
+/* Inner-content */
+
+.inner-content {
+	margin-bottom: 75px;
+}
+
+.inner-content h2 {
+	margin-top: 60px;
+	margin-bottom: 30px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.inner-content h2 + h3 {
+	margin-top: 30px;
+}
+
+.inner-content p {
+	margin: 14px 0;
+}
+
+.inner-content table {
+	border-collapse: collapse;
+}
+
+.inner-content td {
+	padding: 10px 15px;
+	border: 2px solid var(--basic-black);
+}
+
+/* Pagination */
+
+.pagination-list {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.pagination-item {
+	margin-right: 5px;
+}
+
+.pagination-item:last-child {
+	margin-right: 0;
+}
+
+.pagination-item-current {
+	display: block;
+	padding: 10px 19px;
+	margin-right: 5px;
+	color: var(--basic-dark);
+	background-color: var(--basic-white);
+
+}
+
+.pagination-item a {
+	display: block;
+	padding: 10px 19px;
+	color: var(--basic-white);
+	background-color: var(--basic-black);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-item a:active {
+	background-color: var(--special);
+}
+
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+	color: var(--basic-black);
+	background-color: var(--basic-white);
+}
+
+/* Main footer */
+
+.main-footer {
+	padding: 60px 0;
+	margin-top: 65px;
+	color: var(--basic-white);
+	background-color: var(--basic-extra-dark);
+	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/pattern-light.png");
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+
+.main-footer .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-contacts {
+	margin: 0;
+	width: 320px;
+}
+
+.footer-contacts p {
+	margin: 0;
+}
+
+.footer-contacts a {
+	color: var(--basic-white);
+	text-decoration: underline;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+	text-decoration: none;
+}
+
+.footer-social {
+	width: 145px;
+	justify-self: center;
+	text-align: center;
+}
+
+.footer-social ul {
+	width: 141px;
+	padding: 0 auto;
+	margin: 0;
+	list-style: none;
+}
+
+.footer-social h2 {
+	font-size: 14px;
+}
+
+.footer-copyright {
+	max-width: 150px;
+	margin: 0;
+	justify-self: end;
+	text-align: center;
+}
+
+.footer-copyright .button {
+	display: block;
+	margin-right: 0;
+}
+
+.footer-copyright b {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.footer-copyright .button:hover,
+.footer-copyright .button:focus {
+	color: var(--basic-black);
+	background-color: var(--basic-white);
+}
+
+/* Social button */
+
+.social-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 43px;
+	height: 43px;
+	background-color: var(--basic-black);
+	color: inherit;
+}
+
+.social-button:hover,
+.social-button:focus {
+	background-color: var(--basic-white);
+}
+
+.social-button:hover path,
+.social-button:focus path {
+	fill: var(--basic-black);
+}
+
+/* Modal */
+
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	display: none;
+	margin: auto;
+	color: var(--basic-black);
+	background-color: var(--basic-extra-light);
+	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/pattern-light.png"); 
+	background-position: 0 0;
+	background-repeat: repeat;
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Modal close */
+
+.modal-close {
+	position: absolute;
+	top: 0;
+	right: -34px;
+	width: 22px;
+	height: 22px;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 2px;
+	width: 19px;
+	height: 2px;
+	background-color: var(--basic-dark);
+}
+
+.modal-close::before {
+	transform: rotate(45deg);
+}
+
+.modal-close::after {
+	transform: rotate(-45deg);
+}
+
+.modal-close:hover::before,
+.modal-close:focus::before,
+.modal-close:hover::after,
+.modal-close:focus::after {
+	background-color: var(--basic-white);
+}
+
+/* Modal login */
+
+.modal-login {
+	display: none;
+	top: 120px;
+	bottom: auto;
+	width: 300px;
+	padding: 50px 80px;
+}
+
+.modal-login h2 {
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.modal-description {
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+/* Modal map*/
+
+.modal-map {
+	width: 766px;
+	height: 560px;
+	border: 7px solid white;
+	/*display: none;*/
+}
+
+.modal-map img {
+	display: block;
+}
+
+.modal-map iframe {
+	border: none;
+}
+
+/* Login form */
+
+.login-form p {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+	font: inherit;
+	color: var(--basic-black);
+	text-transform: uppercase;
+	background-color: var(--basic-extra-light);
+	border: 2px solid var(--basic-black);
+}
+
+.login-form input:focus {
+	border-color: var(--special);
+}
+
+.login-form .login-help {
+	margin: 15px 0;
+}
+
+.login-icon-user {
+	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/user.svg");
+	background-position: 270px, center;
+	background-repeat: no-repeat;
+}
+
+.login-icon-password {
+	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/lock.svg");
+	background-position: 270px, center;
+	background-repeat: no-repeat;
+}
+
+/* Restore */
+
+.restore {
+	color: var(--basic-black);
+	text-decoration: underline;
+}
+
+.restore:hover,
+.restore:focus {
+	text-decoration: none;
+}
