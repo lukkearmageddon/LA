@@ -24,7 +24,7 @@ body {
 	color: var(--basic-white);
 	text-transform: uppercase;
 	background-color: var(--basic-black);
-	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/bg.jpg");
+	background-image: url("../img/bg.jpg");
 	background-position: top center;
 	background-repeat: no-repeat;
 }
@@ -228,7 +228,7 @@ input[type="radio"].visually-hidden {
 	left: 24px;
 	width: 16px;
 	height: 18px;
-	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/login.svg");
+	background-image: url("../img/login.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	opacity: 0.3;
@@ -298,7 +298,7 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 35px;
 	color: var(--basic-black);
 	background-color: var(--basic-extra-light);
-	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/pattern-light.png"), url("file:///Users/holylemon/Sites/LA/barbershop/img/line.png");
+	background-image: url("../img/pattern-light.png"), url("../img/line.png");
 	background-position: 0 0, center;
 	background-repeat: repeat, no-repeat;
 }
@@ -464,7 +464,7 @@ input[type="radio"].visually-hidden {
 .inner-page {
 	color: var(--basic-black);
 	background-color: var(--basic-extra-light);
-	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/pattern-light.png");
+	background-image: url("../img/pattern-light.png");
 	background-position: 0 0;
 	background-repeat: no-repeat;
 }
@@ -701,7 +701,7 @@ input[type="radio"].visually-hidden {
 	left: -38px;
 	width: 12px;
 	height: 12px;
-	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/cross.svg");
+	background-image: url("../img/cross.svg");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
@@ -997,7 +997,7 @@ input[type="radio"].visually-hidden {
 	margin-top: 65px;
 	color: var(--basic-white);
 	background-color: var(--basic-extra-dark);
-	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/pattern-light.png");
+	background-image: url("../img/pattern-light.png");
 	background-position: 0 0;
 	background-repeat: repeat;
 }
@@ -1033,10 +1033,15 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-social ul {
-	width: 141px;
-	padding: 0 auto;
+	padding: 0;
 	margin: 0;
+	display: flex;
+	width: 141px;
 	list-style: none;
+}
+
+.footer-social ul li {
+	margin-right: 10px;
 }
 
 .footer-social h2 {
@@ -1100,7 +1105,7 @@ input[type="radio"].visually-hidden {
 	margin: auto;
 	color: var(--basic-black);
 	background-color: var(--basic-extra-light);
-	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/pattern-light.png"); 
+	background-image: url("../img/pattern-light.png"); 
 	background-position: 0 0;
 	background-repeat: repeat;
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
@@ -1209,13 +1214,13 @@ input[type="radio"].visually-hidden {
 }
 
 .login-icon-user {
-	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/user.svg");
+	background-image: url("../img/user.svg");
 	background-position: 270px, center;
 	background-repeat: no-repeat;
 }
 
 .login-icon-password {
-	background-image: url("file:///Users/holylemon/Sites/LA/barbershop/img/lock.svg");
+	background-image: url("../img/lock.svg");
 	background-position: 270px, center;
 	background-repeat: no-repeat;
 }
