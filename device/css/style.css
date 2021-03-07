@@ -84,12 +84,14 @@ input[type="radio"].visually-hidden {
 	padding: 10px 30px;
 	height: 300px;
 	align-content: center;
-	border: 1px solid #F0C52E;
+	/*border: 1px solid #F0C52E;*/
 	background-color: var(--basic-yellow-neutral);
 }
 
 .container {
 	width: 1160px;
+	margin: 0 auto;
+	padding: 0 30px;
 }
 
 /* Grid */
@@ -103,7 +105,7 @@ input[type="radio"].visually-hidden {
 	margin-top: 50px;
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
-	align-content: start;
+	align-content: flex-start;
 }
 
 .top-navigation {
@@ -128,11 +130,16 @@ input[type="radio"].visually-hidden {
 
 .left-column,
 .right-column {
-	min-width: 500px;
+	width: 580px;
+}
+
+.left-column {
+	padding: 0 0px;
+	margin: 0;
 }
 
 .right-column {
-	padding: 0;
+	padding: 0 0px;
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
@@ -198,6 +205,7 @@ input[type="radio"].visually-hidden {
 
 .search-box {
 	position: relative;
+	width: 250px;
 	padding: 0;
 	margin: 0;
 	color: var(--basic-black);
@@ -224,8 +232,7 @@ input[type="radio"].visually-hidden {
 
 .slider {
 	position: relative;
-	margin-left: 100px;
-	top: -100px;
+	top: -40px;
 	text-align: left;
 	color: var(--basic-black);
 }
@@ -255,8 +262,12 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-count {
+	position: relative;
+}
+
+.slider-count {
 	position: absolute;
-	/*justify-self: end;*/
+	align-items: ;
 	margin: 0;
 	padding: 0;
 	font-family: 'Gilroy';
@@ -321,17 +332,24 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
+.item-info li {
+	margin-right: 50px;
+}
+
 .item-info p {
 	font-weight: 100; /* Thin, начертание текса "тонкий" */
 }
 .item-info h2 {
-	font-weight: 100; /* Thin, начертание текса "тонкий" */
+	font-family: 'Gilroy';
+	font-weight: 300;
 	font-size: 2em;
 }
 
 /* Catalog */
 
 .catalog {
+	margin: 0;
+	padding: 0;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
@@ -343,18 +361,31 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
+.catalog ul {
+	padding: 0;
+	margin: 0;
+}
+
 .catalog-list li {
 	font-family: 'Gilroy';
 	font-weight: 300;
-	max-width: 160px;
+	width: 160px;
 }
 
 .catalog-box {
 	width: 160px;
 	height: 160px;
+	padding: 0;
 	text-align: center;
 	background-color: var(--basic-yellow-neutral);
 	margin-bottom: 20px;
+}
+
+
+
+.item-box {
+	object-fit: contain;
+	align-items: center;
 }
 
 /*.search-form::before {
