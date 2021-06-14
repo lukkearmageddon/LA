@@ -907,7 +907,7 @@ input[type="radio"].visually-hidden {
 .catalog-item-price .button {
 	padding: 13px 18px 11px;
 	margin-right: 0;
-	line-height: 20px
+	line-height: 20px;
 	color: var(--basic-white);
 }
 
@@ -1101,7 +1101,7 @@ input[type="radio"].visually-hidden {
 	right: 0;
 	left: 0;
 	bottom: 0;
-	display: none;
+	/* display: none; */
 	margin: auto;
 	color: var(--basic-black);
 	background-color: var(--basic-extra-light);
@@ -1178,7 +1178,7 @@ input[type="radio"].visually-hidden {
 	width: 766px;
 	height: 560px;
 	border: 7px solid white;
-	/*display: none;*/
+	display: none;
 }
 
 .modal-map img {
