@@ -11,6 +11,7 @@ const uglify       = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin     = require('gulp-imagemin');
 const del          = require('del');
+const editorconfig = require('editorconfig-checker');
 
 function browsersync() {
   browserSync.init({
